@@ -1,6 +1,3 @@
-header img{
-   width: 60px;
-}
 .app-wrapper{
    display: grid;
    grid-template-rows: 60px 1fr;
@@ -11,21 +8,4 @@ header img{
    grid-template-areas: 
    "h h"
    "n c";
-
-}
-.header{
-   grid-area: h;
-   background-color: rgb(8, 148, 62);
-}
-.nav{
-   grid-area: n;
-   background-color: burlywood;
-}
-.content{
-   grid-area: c;
-   background-color: cornflowerblue;
-}
-.content img{
-   width: 100%;
-   height: 50%;
 }

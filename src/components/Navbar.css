@@ -1,0 +1,14 @@
+.nav{
+   grid-area: n;
+   background-color: burlywood;
+}
+ul{
+   list-style-type: none;
+}
+ul li a {
+   text-decoration: none;
+   color: #fff;
+}
+div{
+   color:chartreuse
+}

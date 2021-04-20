@@ -1,7 +1,8 @@
+import'./Navbar.css'
 
 const Navbar=()=>{
      return(<nav className='nav'>
-     <ul>
+     <ul className='item'>
         <li><a href='#'>Profile</a></li>
         <li><a href='#'>Messages</a></li>
         <li><a href='#'>News</a></li>
