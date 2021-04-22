@@ -1,3 +1,4 @@
+import Post from './MyPosts/Post'
 import'./Profile.css'
 const Profile=()=>{
      return(
@@ -5,25 +6,10 @@ const Profile=()=>{
       <div>
       <img src='https://clck.ru/UPH3d'></img>
       </div>
-      <div>
-         ava+description
-      </div>
 
-       <div>
-          My posts
-          <div>
-             nev post
-          </div>
-          <div>
-             <div>
-                post1
-             </div>
-             <div>
-                post2
-             </div>
-          </div>
-       </div>
-
+      <Post/>
+      <Post/>
+      <Post/>
    </div>
      )
 }
