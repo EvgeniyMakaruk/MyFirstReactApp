@@ -2,7 +2,7 @@ import Post from './MyPosts/Post'
 import'./Profile.css'
 const Profile=()=>{
      return(
-      <div className='content'>
+      <div>
       <div>
       <img src='https://clck.ru/UPH3d'></img>
       </div>

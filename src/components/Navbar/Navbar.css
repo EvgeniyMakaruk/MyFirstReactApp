@@ -9,6 +9,10 @@ ul li a {
    text-decoration: none;
    color: #fff;
 }
+ul li a:hover{
+   color: chocolate
+   ;
+}
 div{
    color:chartreuse
 }
