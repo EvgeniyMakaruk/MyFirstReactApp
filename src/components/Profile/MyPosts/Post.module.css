@@ -1,3 +1,9 @@
-img{
-   width: 50px;
+.avatar p{
+   font-size: 16px;
+   margin: 0;
+}
+.avatar img{
+  border-radius: 100%;
+  max-width: 50px;
+  min-height: 50px;
 }

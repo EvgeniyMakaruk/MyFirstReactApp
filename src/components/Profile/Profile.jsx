@@ -7,9 +7,10 @@ const Profile=()=>{
       <img src='https://clck.ru/UPH3d'></img>
       </div>
 
-      <Post/>
-      <Post/>
-      <Post/>
+      <Post message='Hi, How are you'/>
+      <Post message='It s my first post'/>
+     
+     
    </div>
      )
 }
