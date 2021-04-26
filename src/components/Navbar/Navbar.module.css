@@ -1,4 +1,4 @@
-.nav{
+.navBar{
    grid-area: n;
    background-color: burlywood;
 }
@@ -10,8 +10,11 @@ ul li a {
    color: #fff;
 }
 ul li a:hover{
-   color: chocolate
+   color: rgb(30, 144, 210)
    ;
+}
+ul li a.active{
+   color: rgb(84, 228, 233);
 }
 div{
    color:chartreuse

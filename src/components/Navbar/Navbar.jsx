@@ -1,15 +1,17 @@
-import'./Navbar.css'
+import { NavLink } from 'react-router-dom'
+import s from './Navbar.module.css'
 
-const Navbar=()=>{
-     return(<nav className='nav'>
-     <ul className='item'>
-        <li><a href='/profile'>Profile</a></li>
-        <li><a href='/dialogs'>Messages</a></li>
-        <li><a href='/news'>News</a></li>
-        <li><a href='/Music'>Music</a></li>
-        <li><a href='/Settings'>Settings</a></li>
-     </ul>
-  </nav>)
+const Navbar = () => {
+   return (
+      <nav className={s.navBar}>
+         <ul className='item'>
+            <li><NavLink to='/profile' activeClassName={s.active}>Profile</NavLink></li>
+            <li><NavLink to='/dialogs' activeClassName={s.active}>Messages</NavLink></li>
+            <li><NavLink to='/news' activeClassName={s.active}>News</NavLink></li>
+            <li><NavLink to='/Music' activeClassName={s.active}>Music</NavLink></li>
+            <li><NavLink to='/Settings' activeClassName={s.active}>Settings</NavLink></li>
+         </ul>
+      </nav>)
 }
 
 export default Navbar
