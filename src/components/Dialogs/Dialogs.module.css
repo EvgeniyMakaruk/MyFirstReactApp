@@ -11,3 +11,6 @@
 .active{
    color: rgb(218, 65, 180);
 }
+.dialog li a:hover{
+   color:red
+}
