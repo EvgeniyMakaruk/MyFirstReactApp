@@ -14,3 +14,7 @@
 .dialog li a:hover{
    color:red
 }
+.dialogsItems a{
+   color: #fff;
+   text-decoration: none;
+}
