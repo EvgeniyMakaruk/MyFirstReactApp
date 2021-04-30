@@ -17,7 +17,8 @@ const Dialogs = (props) => {
 
    let messagesElements = props.messages
       .map(message => <Messasge message={message.message} />)
-
+      
+      
 
 
    return (
