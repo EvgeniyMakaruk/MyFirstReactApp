@@ -5,33 +5,33 @@ import React from 'react'
 
 
 const Profile = (props) => {
+    
+     let newPostElement = React.createRef();
+     let addPost = () => {
+          let text = newPostElement.current.value;
+          props.addPost(text)
+          newPostElement.current.value = ''
+     }
+     let onPostChange = () => {
+          let text = newPostElement.current.value;
+          props.updateNewPotText(text);
+     }
 
-let newPostElement=React.createRef();
+     let postElements =
+     
+          props.posts.map(p => <Post message={p.message} likeCount={p.likeCount} addPost={props.addPost} />);
 
-let addPost=()=>{
-     let text=newPostElement.current.value;
-     props.addPost(text)
-     newPostElement.current.value=''
-}
-
-let onPostChange=()=>{
-
-}
-
-     let postElements=
-     props.posts.map(p=><Post message={p.message} likeCount={p.likeCount} addPost={props.addPost} />);
-
-
+         
      return (
           <div>
                <ProfileInfo />
                <div>
-               <textarea ref={newPostElement}
-               onChange={onPostChange}
-                value={props.NewPostText}/>
+                    <textarea ref={newPostElement}
+                    onChange={onPostChange}
+                    value={props.newPostText} />
                </div>
                <div>
-               <button onClick={addPost}>addPost</button>
+                    <button onClick={addPost}>addPost</button>
                </div>
                <div className={s.postsBlock}>
                     {postElements}
