@@ -10,18 +10,25 @@ let newPostElement=React.createRef();
 
 let addPost=()=>{
      let text=newPostElement.current.value;
-     alert(text)
+     props.addPost(text)
+     newPostElement.current.value=''
+}
+
+let onPostChange=()=>{
+
 }
 
      let postElements=
-     props.posts.map(p=><Post message={p.message} likeCount={p.likeCount} />);
+     props.posts.map(p=><Post message={p.message} likeCount={p.likeCount} addPost={props.addPost} />);
 
 
      return (
           <div>
                <ProfileInfo />
                <div>
-               <textarea ref={newPostElement}></textarea>
+               <textarea ref={newPostElement}
+               onChange={onPostChange}
+                value={props.NewPostText}/>
                </div>
                <div>
                <button onClick={addPost}>addPost</button>
