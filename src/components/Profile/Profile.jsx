@@ -8,16 +8,19 @@ const Profile = (props) => {
     
      let newPostElement = React.createRef();
      let addPost = () => {
-          props.addPost()
+          props.dispatch({type:'ADD-POST'})
      }
      let onPostChange = () => {
           let text = newPostElement.current.value;
-          props.updateNewPotText(text);
+          props.dispatch({type:'UPDATE-NEW-POST-TEXT', newText:text});
      }
 
      let postElements =
      
-          props.posts.map(p => <Post message={p.message} likeCount={p.likeCount} addPost={props.addPost} />);
+          props.posts.map(p => <Post
+               message={p.message}
+               likeCount={p.likeCount}
+                />);
 
          
      return (
