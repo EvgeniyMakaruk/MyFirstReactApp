@@ -2,8 +2,8 @@ import Post from './MyPosts/Post'
 import s from './Profile.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 import React from 'react'
-import{addPostActionCreator} from'../../Redux/state'
-import{updateNewPostText} from'../../Redux/state'
+import{addPostActionCreator,updateNewPostText} from'../../Redux/profile-reducer'
+
 
 const Profile = (props) => {
     
