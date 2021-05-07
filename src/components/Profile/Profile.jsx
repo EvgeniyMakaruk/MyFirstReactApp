@@ -6,7 +6,7 @@ import{addPostActionCreator,updateNewPostText} from'../../Redux/profile-reducer'
 
 
 const Profile = (props) => {
-    
+  
      let newPostElement = React.createRef();
 
      let addPost = () => {
