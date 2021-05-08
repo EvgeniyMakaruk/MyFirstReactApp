@@ -15,8 +15,9 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 
 
+
 const App = (props) => {
-  debugger
+ debugger
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -26,7 +27,7 @@ const App = (props) => {
           <Route path='/dialogs' render={() => <DialogsContainer
             store={props.store}/>} />
           <Route path='/profile' render={() => <Profile
-            profilePage={props.profilePage}
+            profilePage={props.state.profilePage}
             newPostText={props.state.profilePage.newPostText}
             posts={props.state.profilePage.posts}
             dispatch={props.dispatch} />} />
