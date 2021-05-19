@@ -2,7 +2,6 @@ import Profile from '../Profile';
 import s from'./ProfileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
 const ProfileInfo=(props)=>{
-
    if (!props.profile){
       return <Preloader/>
    }
@@ -15,7 +14,7 @@ const ProfileInfo=(props)=>{
 
       <div className={s.DescriptionBlock}>
          <img src={props.profile.photos.large}/>
-         ava+description
+         <div>{props.profile.aboutMe}</div>
       </div>
       </div>
    )
