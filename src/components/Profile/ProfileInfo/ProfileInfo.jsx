@@ -15,6 +15,7 @@ const ProfileInfo=(props)=>{
       <div className={s.DescriptionBlock}>
          <img src={props.profile.photos.large}/>
          <div>{props.profile.aboutMe}</div>
+         <div>{'Мой twitter '+props.profile.contacts.twitter}</div>
       </div>
       </div>
    )
