@@ -1,6 +1,12 @@
+import Profile from '../Profile';
 import s from'./ProfileInfo.module.css'
+import Preloader from '../../common/Preloader/Preloader'
+const ProfileInfo=(props)=>{
 
-const ProfileInfo=()=>{
+   if (!props.profile){
+      return <Preloader/>
+   }
+
    return(
       <div>
          <div>
@@ -8,6 +14,7 @@ const ProfileInfo=()=>{
          </div>
 
       <div className={s.DescriptionBlock}>
+         <img src={props.profile.photos.large}/>
          ava+description
       </div>
       </div>
