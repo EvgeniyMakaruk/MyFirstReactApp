@@ -1,0 +1,14 @@
+.loginBlock{
+   float: right;  
+}
+.loginBlock a{
+   margin: 25px;
+   color: blanchedalmond;
+   text-decoration: none;
+}
+.loginBlock a:hover{
+   margin: 25px;
+   color: rgb(0, 0, 0);
+   text-decoration: underline;
+}
+
