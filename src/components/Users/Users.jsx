@@ -36,11 +36,11 @@ let Users = (props) => {
                </div>
                <div>
                   {u.followed
-                     ? <button onClick={() => {
-
+                     ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                        props.toggleFollowingProgress(true, u.id)
                         axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
                            withCredentials: true,
-                           headers:{
+                           headers: {
                               'API-KEY': '53ce3e57-898f-4445-bb62-40cd29d21ae8'
                            }
                         })
@@ -48,13 +48,15 @@ let Users = (props) => {
                               if (response.data.resultCode === 0) {
                                  props.unfollow(u.id)
                               }
+                              props.toggleFollowingProgress(false, u.id)
                            })
 
                      }}>Unfollow</button> :
-                     <button onClick={() => {
+                     <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                        props.toggleFollowingProgress(true, u.id)
                         axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
                            withCredentials: true,
-                           headers:{
+                           headers: {
                               'API-KEY': '53ce3e57-898f-4445-bb62-40cd29d21ae8'
                            }
                         })
@@ -62,6 +64,7 @@ let Users = (props) => {
                               if (response.data.resultCode === 0) {
                                  props.follow(u.id)
                               }
+                              props.toggleFollowingProgress(false, u.id)
                            })
 
 
@@ -84,5 +87,4 @@ let Users = (props) => {
       }
    </div >
 }
-
 export default Users
